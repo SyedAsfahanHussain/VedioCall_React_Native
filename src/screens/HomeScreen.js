@@ -7,7 +7,8 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import {faVideo} from '@fortawesome/free-solid-svg-icons';
 import * as ZIM from 'zego-zim-react-native';
 import * as ZPNs from 'zego-zpns-react-native';
 import ZegoUIKitPrebuiltCallService, {
@@ -67,7 +68,9 @@ const HomeScreen = ({navigation}) => {
               <TouchableOpacity
                 style={GlobalStyle.primarybutton}
                 onPress={() => navigation.navigate('chat')}>
-                <Text style={styles.username}>vediocall</Text>
+                <Text style={styles.username}>
+                  <FontAwesomeIcon icon={faVideo} size={32} color={'#000'} />
+                </Text>
               </TouchableOpacity>
             </View>
           </View>
